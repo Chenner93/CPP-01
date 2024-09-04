@@ -13,5 +13,6 @@ int	main(void)
 	ptr_first_zombie = zombieHorde(qte_zombie, "Claire");
 	
 	ptr_first_zombie->suppress_zombie(qte_zombie);
+	// ptr_first_zombie->announce();
 	return (0);
 }

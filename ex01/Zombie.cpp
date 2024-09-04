@@ -18,7 +18,10 @@ void	Zombie::give_name( std::string zombie_name) {
 };
 
 void	Zombie::announce( void) {
+	// if (this == nullptr)
+	// 	return ;
 	std::cout << this->name + ": BraiiiiiiinnnzzzZ..." << std::endl;
+	// this->next->announce();
 };
 
 void	Zombie::init_next_zombie( Zombie *next_zombie ) {
