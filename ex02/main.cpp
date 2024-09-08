@@ -17,17 +17,16 @@ And then:
 
 int	main(void) {
 	std::string	sentence = "HI THIS IS BRAIN";
-	const char		*ptr_sentence;
-	// std::&string;
+	std::string	*ptr_sentence = &sentence;
+	std::string	&ref_sentence = sentence;
 
-	std::cout << "This is the string -> " + sentence << std::endl;
-
-	ptr_sentence = sentence.c_str();
-	std::cout << "This is the stringPTR -> " << &ptr_sentence << std::endl;
-	std::cout << "This is the stringPTR -> " << static_cast<const void*>(ptr_sentence) << std::endl;
-	*ptr_sentence++;
-	std::cout << "This is the stringPTR -> " << &ptr_sentence << std::endl;
-	std::cout << "This is the stringPTR -> " << static_cast<const void*>(ptr_sentence) << std::endl;
+	std::cout << "This is the adress of string -> " << &sentence << std::endl;
+	std::cout << "This is the adress of stringPTR -> " << ptr_sentence << std::endl;
+	std::cout << "This is the adress of stringREF -> " << &ref_sentence << std::endl;
+	std::cout << std::endl;
+	std::cout << "This is the value string -> " << sentence << std::endl;
+	std::cout << "This is the value stringPTR -> " << *ptr_sentence << std::endl;
+	std::cout << "This is the value stringREF -> " << ref_sentence << std::endl;
 
 
 	return (0);
