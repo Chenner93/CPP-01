@@ -13,10 +13,11 @@ class	Weapon
 
 	public:
 		
-		// Weapon( void );
+		Weapon( void );
 		Weapon(std::string);
 		~Weapon( void );
-		const std::string	getType( void );
+		const std::string	&getType( void );
+		std::string	getType2( void );
 		void	setType(std::string str);
 };
 
