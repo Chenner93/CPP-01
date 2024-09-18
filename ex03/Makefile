@@ -9,8 +9,9 @@ FLAGS	= -Wall -Wextra -Werror -std=c++98
 ##	SRC && OBJ
 
 SRC		=	main.cpp \
-			HumanA.cpp HumanB.cpp \
 			Weapon.cpp \
+			HumanA.cpp HumanB.cpp \
+
 OBJ		= $(SRC:.cpp=.o)
 
 ##########################################################
