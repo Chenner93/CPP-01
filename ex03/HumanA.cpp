@@ -1,9 +1,10 @@
 #include "HumanA.hpp"
 #include "Weapon.hpp"
 
-HumanA::HumanA(std::string name, Weapon club){
+HumanA::HumanA(std::string name, Weapon &club)
+	:tool(club)
+{
 	this->name = name;
-	this->tool(club.getType2()); // Probem pas regler du tout
 	std::cout << "Contructor HumanA" << std::endl;
 };
 

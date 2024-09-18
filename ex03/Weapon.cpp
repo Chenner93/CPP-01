@@ -1,11 +1,5 @@
 #include "Weapon.hpp"
 
-Weapon::Weapon(void)
-{
-	// this->type = "Cailloux";
-	std::cout << "First Constructor Weapon" << std::endl;
-}
-
 Weapon::Weapon( std::string type ){
 	this->type = type;
 	std::cout << "Constructor Weapon" << std::endl;
@@ -16,11 +10,6 @@ Weapon::~Weapon( void ){
 };
 
 const std::string	&Weapon::getType( void )
-{
-	return (this->type);
-};
-
-std::string	Weapon::getType2( void )
 {
 	return (this->type);
 };

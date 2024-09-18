@@ -1,20 +1,22 @@
 #include "HumanB.hpp"
 
 HumanB::HumanB(std::string name){
-	this->tool = nullptr;
 	this->name = name;
+	std::cout << "Constructor HumanB" << std::endl;
 };
 
-HumanB::~HumanB(){};
+HumanB::~HumanB(){
+	std::cout << "Destructor HumanB" << std::endl;
+};
 
 void	HumanB::attack(void){
 	if (this->tool == nullptr)
-		std::cout << this->name << " attacks with their barehanded" << std::endl;
+		std::cout << this->name << "Get killed" << std::endl;
 	else
-		std::cout << this->name << " attacks with their " << this->tool->getType() << std::endl;
+		std::cout << this->name << " attacks with a " << this->tool->getType() << std::endl;
 };
 
-// void    HumanB::setWeapon(Weapon club)
-// {
-// 	this->tool = club.getType();
-// };
+void    HumanB::setWeapon(Weapon &club)
+{
+	this->tool = &club;
+};
