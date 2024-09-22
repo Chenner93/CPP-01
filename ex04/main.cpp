@@ -26,7 +26,7 @@ bool	checkOpen(std::ifstream *myfile, std::ofstream *newfile, char *av)
 	}
 	newfile->open(std::string(av) + ".replace", std::ios::out | std::ios::trunc); //in for input operation
 	if (myfile->is_open() == false) {
-		std::cerr << "file: " << "Failed to create newfile" << std::endl;
+		std::cerr << "file: " << "Failed to create/trunc newfile" << std::endl;
 		return (false);
 	}
 	return (true);
@@ -46,14 +46,10 @@ int	main(int ac, char **av)
 		while (1)
 		{
 			index = line.find(av[2]);
-			std::cout << "index = " << index << std::endl;
 			if (index == -1)
 				break ;
-			std::cout << "before --> "<< line << std::endl;
 			line.erase(index, std::string(av[2]).length());
-			std::cout << "middle --> "<< line << std::endl;
 			line.insert(index, av[3]);
-			std::cout << "after --> "<< line << std::endl;
 		}
 		newfile << line << std::endl;
 	}
